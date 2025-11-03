@@ -129,4 +129,16 @@ if (detailContainer) {
   }
 }
 
+// ======= ANIMASI SCROLL (Fade-in saat muncul di layar) =======
+document.addEventListener("scroll", () => {
+  const fades = document.querySelectorAll(".fade-in");
+  fades.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+});
+
+
 
